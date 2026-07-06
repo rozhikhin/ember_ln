@@ -1,7 +1,28 @@
-<h2>Новый спикер</h2>
-<label>Имя: {{input value=model.name}}</label>
-<label>Специализация: {{input value=model.specialization}}</label>
-<label>Страна: {{input value=model.country}}</label>
-<label>Биография: {{textarea value=model.bio rows="4"}}</label>
-<button {{action "saveSpeaker"}}>Сохранить</button>
-<button {{action "cancel"}}>Отмена</button>
+<div class="page-header">
+  <h1>Новый спикер</h1>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="form-group">
+      <label>Имя</label>
+      {{input class="form-control" value=model.name placeholder="Имя спикера"}}
+    </div>
+    <div class="form-group">
+      <label>Специализация</label>
+      {{input class="form-control" value=model.specialization placeholder="Специализация"}}
+    </div>
+    <div class="form-group">
+      <label>Страна</label>
+      {{input class="form-control" value=model.country placeholder="Страна"}}
+    </div>
+    <div class="form-group">
+      <label>Биография</label>
+      {{textarea class="form-control" value=model.bio rows="4" placeholder="Биография"}}
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-primary" {{action "saveSpeaker"}}>Сохранить</button>
+      <button class="btn btn-default" {{action "cancel"}}>Отмена</button>
+    </div>
+  </div>
+</div>

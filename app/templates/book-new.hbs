@@ -1,24 +1,49 @@
-<h2>Новая книга</h2>
+<div class="page-header">
+  <h1>Новая книга</h1>
+</div>
 
-<label>Название: {{input value=model.title}}</label>
-<label>Автор: {{input value=model.author}}</label>
-<label>Год: {{input type="number" value=model.year}}</label>
-<label>Жанр: {{input value=model.genre}}</label>
-<label>Страниц: {{input type="number" value=model.pages}}</label>
-<label>ISBN: {{input value=model.isbn}}</label>
-
-<label>Спикер:
-  {{#power-select
-    options=speakers
-    selected=model.speaker
-    searchField="name"
-    onchange=(action (mut model.speaker))
-    as |speaker|}}
-    {{speaker.name}}
-  {{/power-select}}
-</label>
-
-<button {{action "saveBook"}}>Сохранить</button>
-<button {{action "cancel"}}>Отмена</button>
-
-
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="form-group">
+      <label>Название</label>
+      {{input class="form-control" value=model.title placeholder="Название книги"}}
+    </div>
+    <div class="form-group">
+      <label>Автор</label>
+      {{input class="form-control" value=model.author placeholder="Автор"}}
+    </div>
+    <div class="form-group">
+      <label>Год</label>
+      {{input class="form-control" type="number" value=model.year placeholder="Год издания"}}
+    </div>
+    <div class="form-group">
+      <label>Жанр</label>
+      {{input class="form-control" value=model.genre placeholder="Жанр"}}
+    </div>
+    <div class="form-group">
+      <label>Страниц</label>
+      {{input class="form-control" type="number" value=model.pages placeholder="Количество страниц"}}
+    </div>
+    <div class="form-group">
+      <label>ISBN</label>
+      {{input class="form-control" value=model.isbn placeholder="ISBN"}}
+    </div>
+    <div class="form-group">
+      <label>Спикер</label>
+      {{#power-select
+        options=speakers
+        selected=model.speaker
+        searchField="name"
+        triggerClass="form-control"
+        placeholder="Выберите спикера"
+        onchange=(action (mut model.speaker))
+        as |speaker|}}
+        {{speaker.name}}
+      {{/power-select}}
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-primary" {{action "saveBook"}}>Сохранить</button>
+      <button class="btn btn-default" {{action "cancel"}}>Отмена</button>
+    </div>
+  </div>
+</div>

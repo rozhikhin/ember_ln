@@ -1,6 +1,11 @@
-<h1>Posts</h1>
-{{outlet}}
- {{#each posts as |post|}}
-  <div>{{post.title}}</div>
- {{/each}}
-{{outlet}}
+<div class="page-header">
+  <h1>Posts</h1>
+</div>
+
+<ul class="list-group">
+  {{#each posts as |post|}}
+    <li class="list-group-item">{{post.title}}</li>
+  {{else}}
+    <li class="list-group-item text-muted text-center">Записей нет</li>
+  {{/each}}
+</ul>

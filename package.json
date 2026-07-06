@@ -23,6 +23,7 @@
     "quick-temp": "0.1.5"
   },
   "devDependencies": {
+    "bootstrap": "^3.4.1",
     "broccoli-asset-rev": "^2.4.2",
     "ember-ajax": "0.7.1",
     "ember-cli": "2.4.3",

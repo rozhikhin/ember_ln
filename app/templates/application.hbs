@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <span class="navbar-brand">Книги и спикеры</span>
+    </div>
+    <ul class="nav navbar-nav">
+      <li>{{#link-to "speakers"}}Спикеры{{/link-to}}</li>
+      <li>{{#link-to "books"}}Книги{{/link-to}}</li>
+      <li>{{#link-to "posts"}}Posts{{/link-to}}</li>
+    </ul>
+  </div>
+</nav>
 
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>
