@@ -1,0 +1,7 @@
+<h2>Новый спикер</h2>
+<label>Имя: {{input value=model.name}}</label>
+<label>Специализация: {{input value=model.specialization}}</label>
+<label>Страна: {{input value=model.country}}</label>
+<label>Биография: {{textarea value=model.bio rows="4"}}</label>
+<button {{action "saveSpeaker"}}>Сохранить</button>
+<button {{action "cancel"}}>Отмена</button>

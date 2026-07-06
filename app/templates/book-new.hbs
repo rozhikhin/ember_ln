@@ -1,0 +1,24 @@
+<h2>Новая книга</h2>
+
+<label>Название: {{input value=model.title}}</label>
+<label>Автор: {{input value=model.author}}</label>
+<label>Год: {{input type="number" value=model.year}}</label>
+<label>Жанр: {{input value=model.genre}}</label>
+<label>Страниц: {{input type="number" value=model.pages}}</label>
+<label>ISBN: {{input value=model.isbn}}</label>
+
+<label>Спикер:
+  {{#power-select
+    options=speakers
+    selected=model.speaker
+    searchField="name"
+    onchange=(action (mut model.speaker))
+    as |speaker|}}
+    {{speaker.name}}
+  {{/power-select}}
+</label>
+
+<button {{action "saveBook"}}>Сохранить</button>
+<button {{action "cancel"}}>Отмена</button>
+
+
