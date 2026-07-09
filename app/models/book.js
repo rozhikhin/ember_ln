@@ -7,5 +7,6 @@ export default DS.Model.extend({
     genre: DS.attr('string'),
     pages: DS.attr('number'),
     isbn: DS.attr('string'),
-    speaker: DS.belongsTo('speaker')
+    speaker: DS.belongsTo('speaker'),
+    tags: DS.attr('string'),
 });

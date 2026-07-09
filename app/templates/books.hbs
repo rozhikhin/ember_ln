@@ -7,6 +7,29 @@
   </div>
 </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-group" style="margin-bottom: 0;">
+          <label>Поиск по всем полям</label>
+          {{input class="form-control" value=q input=(action "updateQ" value="target.value") placeholder="Название, автор, жанр..."}}
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="form-group" style="margin-bottom: 0;">
+          <label>Поиск по тегам</label>
+          {{input class="form-control" value=tags input=(action "updateTags" value="target.value") placeholder="sci-fi, fantasy..."}}
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <label>&nbsp;</label>
+        <button class="btn btn-default btn-block" {{action "clearSearch"}}>Сбросить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
@@ -14,6 +37,7 @@
       <th>Автор</th>
       <th>Год</th>
       <th>Жанр</th>
+      <th>Теги</th>
       <th>Спикер</th>
       <th class="text-center" style="width: 200px;">Действия</th>
     </tr>
@@ -25,6 +49,7 @@
         <td>{{book.author}}</td>
         <td>{{book.year}}</td>
         <td>{{book.genre}}</td>
+        <td>{{book.tags}}</td>
         <td>{{book.speaker.name}}</td>
         <td class="text-center">
           {{#link-to "book-edit" book.id class="btn btn-primary btn-xs"}}
@@ -37,7 +62,7 @@
       </tr>
     {{else}}
       <tr>
-        <td colspan="6" class="text-center text-muted">Книги не найдены</td>
+        <td colspan="7" class="text-center text-muted">Книги не найдены</td>
       </tr>
     {{/each}}
   </tbody>

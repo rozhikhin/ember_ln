@@ -41,6 +41,10 @@
         {{speaker.name}}
       {{/power-select}}
     </div>
+    <div class="form-group">
+      <label>Теги</label>
+      {{input class="form-control" value=model.tags placeholder="Теги"}}
+    </div>
     <div class="form-actions">
       <button class="btn btn-primary" {{action "saveBook"}}>Сохранить</button>
       <button class="btn btn-default" {{action "cancel"}}>Отмена</button>
