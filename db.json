@@ -1,0 +1,111 @@
+{
+  "speakers": [
+    {
+      "id": 2,
+      "name": "James Mitchell",
+      "specialization": "Science fiction",
+      "bio": "Author of bestselling sci-fi novels and TED speaker on future technologies.",
+      "country": "United Kingdom"
+    },
+    {
+      "id": 3,
+      "name": "Мария Соколова",
+      "specialization": "Детская литература",
+      "bio": "Автор более 20 книг для детей и подростков, участница международных книжных ярмарок.",
+      "country": "Россия"
+    },
+    {
+      "id": 4,
+      "name": "Elena Costa",
+      "specialization": "Historical fiction",
+      "bio": "Historian and novelist specializing in Mediterranean history of the 20th century.",
+      "country": "Spain"
+    },
+    {
+      "name": "Петя",
+      "specialization": "Спец",
+      "bio": "вфыв\nвфыв\nфыв\nфыв\n",
+      "country": "РФ",
+      "id": 6
+    }
+  ],
+  "books": [
+    {
+      "title": "Orbital Dreams",
+      "author": "James Mitchell",
+      "year": 2019,
+      "genre": "Science fiction",
+      "pages": 512,
+      "isbn": "978-0-06-345678-9",
+      "tags": "sci-fi, space, adventure, космос",
+      "speaker": null,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "title": "The Last Colony",
+      "author": "James Mitchell",
+      "year": 2022,
+      "genre": "Science fiction",
+      "speakerId": 2,
+      "pages": 448,
+      "isbn": "978-0-06-456789-0",
+      "tags": "sci-fi, colony, dystopia"
+    },
+    {
+      "id": 5,
+      "title": "Приключения Кота-исследователя",
+      "author": "Мария Соколова",
+      "year": 2020,
+      "genre": "Детская литература",
+      "speakerId": 3,
+      "pages": 96,
+      "isbn": "978-5-353-345678-1",
+      "tags": "children, adventure, animals"
+    },
+    {
+      "id": 6,
+      "title": "Тайна старой библиотеки",
+      "author": "Мария Соколова",
+      "year": 2024,
+      "genre": "Детская литература",
+      "speakerId": 3,
+      "pages": 128,
+      "isbn": "978-5-353-456789-2",
+      "tags": "children, mystery, library"
+    },
+    {
+      "id": 7,
+      "title": "La Sombra del Mediterráneo",
+      "author": "Elena Costa",
+      "year": 2018,
+      "genre": "Historical fiction",
+      "speakerId": 4,
+      "pages": 360,
+      "isbn": "978-84-123456-7-8",
+      "tags": "historical, mediterranean, drama"
+    },
+    {
+      "title": "Memorias de Barcelona",
+      "author": "Elena Costa",
+      "year": 2021,
+      "genre": "Historical fiction",
+      "pages": 392,
+      "isbn": "978-84-234567-8-9",
+      "speaker": "4",
+      "id": 8,
+      "tags": "historical, barcelona, memoir"
+    },
+    {
+      "title": "Neww book 1",
+      "author": "Just Author",
+      "year": 1999,
+      "genre": "Comedy",
+      "pages": 111,
+      "isbn": "1212121212",
+      "speaker": "6",
+      "id": 9,
+      "tags": "comedy, humor"
+    }
+  ]
+}
