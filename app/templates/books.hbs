@@ -49,7 +49,15 @@
         <td>{{book.author}}</td>
         <td>{{book.year}}</td>
         <td>{{book.genre}}</td>
-        <td>{{book.tags}}</td>
+        <td>
+          {{#each (split-tags book.tags) as |tag|}}
+            {{#link-to "books" (query-params tags=tag) class="label label-success"}}
+              {{tag}}
+            {{/link-to}} &nbsp;
+          {{else}}
+            <span class="text-muted">—</span>
+          {{/each}}
+        </td>
         <td>{{book.speaker.name}}</td>
         <td class="text-center">
           {{#link-to "book-edit" book.id class="btn btn-primary btn-xs"}}
